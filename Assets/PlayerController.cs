@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
     public float rotationSpeed = 10f; // Velocidade de rotação
     public float heightOffset = 3.11f; // Distância fixa acima do terreno
 
+    [SerializeField] private Transform armacaoMarvin; 
+
     private Vector3 startPosition;
     private Transform cameraTransform;
 
@@ -29,6 +31,7 @@ public class PlayerController : MonoBehaviour
         forward.Normalize();
         right.Normalize();
 
+        // Movimenatar o personagem e virar pra direção certa (referencial camaera)
         Vector3 moveDirection = (forward * moveZ + right * moveX).normalized;
         if (moveDirection.magnitude > 0)
         {
@@ -44,5 +47,11 @@ public class PlayerController : MonoBehaviour
         // Aplica o movimento de subida e descida com a função seno, mantendo a altura relativa ao terreno
         float floatOffset = Mathf.Sin(Time.time * floatFrequency) * floatAmplitude;
         transform.position = new Vector3(transform.position.x, groundHeight + heightOffset + floatOffset, transform.position.z);
+
+        // Bloqueia a rotação no eixo X e Z, estava "deslizando" quando o terreno era irregular
+        if (armacaoMarvin != null)
+        {
+            armacaoMarvin.rotation = Quaternion.Euler(-90, armacaoMarvin.rotation.eulerAngles.y, armacaoMarvin.rotation.eulerAngles.z);
+        }
     }
 }

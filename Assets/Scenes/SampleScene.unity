@@ -472,6 +472,7 @@ MonoBehaviour:
   floatFrequency: 2
   rotationSpeed: 10
   heightOffset: 3.11
+  armacaoMarvin: {fileID: 406999133}
 --- !u!4 &305770108 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 45f6bff9626161241aad1bd56bce0fac, type: 3}
@@ -708,7 +709,12 @@ CapsuleCollider:
   m_Radius: 0.014302955
   m_Height: 0.0579803
   m_Direction: 2
-  m_Center: {x: -0.01, y: -0.007922409, z: 0.021091338}
+  m_Center: {x: -0.002, y: 0, z: 0.021091338}
+--- !u!4 &406999133 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6589155002311914634, guid: 45f6bff9626161241aad1bd56bce0fac, type: 3}
+  m_PrefabInstance: {fileID: 1621135382}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &756229017
 GameObject:
   m_ObjectHideFlags: 0
@@ -1557,6 +1563,22 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 45f6bff9626161241aad1bd56bce0fac, type: 3}
       propertyPath: m_Name
       value: marvin2.0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6589155002311914634, guid: 45f6bff9626161241aad1bd56bce0fac, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6589155002311914634, guid: 45f6bff9626161241aad1bd56bce0fac, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6589155002311914634, guid: 45f6bff9626161241aad1bd56bce0fac, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6589155002311914634, guid: 45f6bff9626161241aad1bd56bce0fac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
