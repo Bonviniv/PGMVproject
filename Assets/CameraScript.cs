@@ -38,13 +38,26 @@ public class CameraScript : MonoBehaviour
             rotationY = Mathf.Clamp(rotationY, minYAngle, maxYAngle);
 
             Quaternion rotation = Quaternion.Euler(rotationY, rotationX, 0);
-            Vector3 offset = rotation * new Vector3(0, 0, -distance);
+            Vector3 desiredCameraPos = target.position + rotation * new Vector3(0, 0, -distance);
 
             // Ajusta a posição da câmera com base na configuração de followFloating
             float adjustedY = followFloating ? target.position.y : baseHeightOffset;
-            transform.position = new Vector3(target.position.x + offset.x, adjustedY + offset.y, target.position.z + offset.z);
+            Vector3 correctedTargetPos = new Vector3(target.position.x, adjustedY, target.position.z);
+            Vector3 direction = (desiredCameraPos - correctedTargetPos).normalized;
+            float maxDistance = distance;
 
-            transform.LookAt(new Vector3(target.position.x, adjustedY, target.position.z));
+            // Raycast para detectar colisões
+            RaycastHit hit;
+            if (Physics.Raycast(correctedTargetPos, direction, out hit, maxDistance))
+            {
+                transform.position = hit.point - direction * 0.5f; // Pequeno recuo para evitar atravessar
+            }
+            else
+            {
+                transform.position = desiredCameraPos;
+            }
+
+            transform.LookAt(correctedTargetPos);
         }
     }
 }

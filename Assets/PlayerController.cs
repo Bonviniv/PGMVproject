@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     public float rotationSpeed = 10f; // Velocidade de rotação
     public float heightOffset = 3.11f; // Distância fixa acima do terreno
 
-    [SerializeField] private Transform armacaoMarvin; 
+    [SerializeField] private Transform armacaoMarvin;
 
     private Vector3 startPosition;
     private Transform cameraTransform;
@@ -17,6 +17,10 @@ public class PlayerController : MonoBehaviour
     {
         startPosition = transform.position;
         cameraTransform = Camera.main.transform;
+
+        // Oculta o cursor do mouse dentro da tela do jogo
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     void Update()
