@@ -10,7 +10,6 @@ public class CameraScript : MonoBehaviour
     private float rotationX = 0f;
     private float rotationY = 0f;
     private bool followFloating = true; // Controle para seguir ou não a subida e descida
-    private float baseHeightOffset; // Armazena o offset base da altura do personagem
 
     void Start()
     {
@@ -19,8 +18,10 @@ public class CameraScript : MonoBehaviour
             Vector3 angles = transform.eulerAngles;
             rotationX = angles.y;
             rotationY = angles.x;
-            baseHeightOffset = target.position.y - Mathf.Sin(Time.time * 2f) * 0.5f; // Define a altura base do personagem sem o efeito senoidal
         }
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     void LateUpdate()
@@ -38,11 +39,13 @@ public class CameraScript : MonoBehaviour
             rotationY = Mathf.Clamp(rotationY, minYAngle, maxYAngle);
 
             Quaternion rotation = Quaternion.Euler(rotationY, rotationX, 0);
-            Vector3 desiredCameraPos = target.position + rotation * new Vector3(0, 0, -distance);
 
-            // Ajusta a posição da câmera com base na configuração de followFloating
-            float adjustedY = followFloating ? target.position.y : baseHeightOffset;
+            // Corrige o valor de Y com base na escolha do usuário
+            float floatOffset = Mathf.Sin(Time.time * 2f) * 0.5f;
+            float adjustedY = followFloating ? target.position.y : target.position.y - floatOffset;
+
             Vector3 correctedTargetPos = new Vector3(target.position.x, adjustedY, target.position.z);
+            Vector3 desiredCameraPos = correctedTargetPos + rotation * new Vector3(0, 0, -distance);
             Vector3 direction = (desiredCameraPos - correctedTargetPos).normalized;
             float maxDistance = distance;
 
