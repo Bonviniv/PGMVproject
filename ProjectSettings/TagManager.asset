@@ -6,6 +6,8 @@ TagManager:
   tags:
   - vaso
   - vasoBase
+  - poste
+  - luzPoste
   layers:
   - Default
   - TransparentFX

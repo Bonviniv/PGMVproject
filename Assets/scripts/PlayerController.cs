@@ -28,6 +28,9 @@ public class PlayerController : MonoBehaviour
     private Transform cameraTransform;     // Referência à câmera principal
 
     private List<GameObject> vasosInScene = new List<GameObject>(); // Cache local dos vasos com tag "vaso"
+                                                                 
+    private Dictionary<Light, (Color, float)> posteOriginalSettings = new Dictionary<Light, (Color, float)>(); // Guarda a intensidade e cor original das luzes dos postes
+
 
     void Start()
     {
@@ -52,6 +55,10 @@ public class PlayerController : MonoBehaviour
 
         // Aplica flutuação vertical
         ApplyFloatingEffect(groundHeight);
+
+        // Lida com a ação de ligar ou desligar postes
+        HandlePosteInteraction();
+
 
         // Corrige a rotação da "armacaoMarvin"
         if (armacaoMarvin != null)
@@ -195,4 +202,58 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+
+   
+    /// Permite ao jogador interagir com postes de luz. Pressionar 'P' alterna a luz ligada/desligada.
+    void HandlePosteInteraction()
+    {
+        GameObject[] postes = GameObject.FindGameObjectsWithTag("poste");
+
+        foreach (GameObject poste in postes)
+        {
+            float dist = Vector3.Distance(transform.position, poste.transform.position);
+
+            if (dist <= 5f)
+            {
+                // Debug.Log("Perto do poste");
+                // Verifica se o jogador apertou a tecla "P"
+                if (Input.GetKeyDown(KeyCode.P))
+                {
+                    foreach (Transform child in poste.transform)
+                    {
+                        if (child.CompareTag("luzPoste"))
+                        {
+                            Light luz = child.GetComponent<Light>();
+                            if (luz != null)
+                            {
+                                if (luz.enabled)
+                                {
+                                    // Salva configurações originais se ainda não estiverem salvas
+                                    if (!posteOriginalSettings.ContainsKey(luz))
+                                    {
+                                        posteOriginalSettings[luz] = (luz.color, luz.intensity);
+                                    }
+
+                                    // Apaga a luz
+                                    luz.enabled = false;
+                                }
+                                else
+                                {
+                                    // Liga a luz com os valores originais
+                                    if (posteOriginalSettings.TryGetValue(luz, out var settings))
+                                    {
+                                        luz.color = settings.Item1;
+                                        luz.intensity = settings.Item2;
+                                    }
+
+                                    luz.enabled = true;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 }
