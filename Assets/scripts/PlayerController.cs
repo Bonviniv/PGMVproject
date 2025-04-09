@@ -4,16 +4,16 @@ using System.Collections.Generic;
 public class PlayerController : MonoBehaviour
 {
     // Velocidade de movimento do jogador (não exceder 10 para evitar problemas de colisão)
-    public float moveSpeed = 9f;
+    public float moveSpeed = 7f;
 
     // Parâmetros para o efeito de flutuação vertical
     public float floatAmplitude = 0.5f;
     public float floatFrequency = 2f;
 
-    public float posteDist = 17f;
-
     // Velocidade de rotação do personagem
     public float rotationSpeed = 10f;
+
+    public float posteDist=18f;
 
     // Altura vertical do personagem em relação ao terreno
     public float heightOffset = 3.11f;
@@ -30,6 +30,9 @@ public class PlayerController : MonoBehaviour
     private Transform cameraTransform;     // Referência à câmera principal
 
     private List<GameObject> vasosInScene = new List<GameObject>(); // Cache local dos vasos com tag "vaso"
+                                                                 
+    private Dictionary<Light, (Color, float)> posteOriginalSettings = new Dictionary<Light, (Color, float)>(); // Guarda a intensidade e cor original das luzes dos postes
+
 
     void Start()
     {
@@ -54,6 +57,10 @@ public class PlayerController : MonoBehaviour
 
         // Aplica flutuação vertical
         ApplyFloatingEffect(groundHeight);
+
+        // Lida com a ação de ligar ou desligar postes
+        HandlePosteInteraction();
+
 
         // Corrige a rotação da "armacaoMarvin"
         if (armacaoMarvin != null)
@@ -197,7 +204,6 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-<<<<<<< HEAD
 
    
     /// Permite ao jogador interagir com postes de luz. Pressionar 'P' alterna a luz ligada/desligada.
@@ -253,6 +259,4 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-=======
->>>>>>> parent of 6289888 (1.14)
 }
