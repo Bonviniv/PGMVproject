@@ -475,6 +475,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7098212444233343279}
   serializedVersion: 2
+<<<<<<< HEAD:Assets/prefabs/Cena 2.0.unity
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.023, y: 7.243, z: 2.288}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -1084,6 +1085,61 @@ LODGroup:
     renderers:
     - renderer: {fileID: 5171660267486765833}
   m_Enabled: 0
+=======
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4259351785422905991, guid: da3a014c775130f498af3264877a7ed6, type: 3}
+      propertyPath: m_Name
+      value: vaso com planta Ncarn prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 5809983223745389975, guid: da3a014c775130f498af3264877a7ed6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -27.653185
+      objectReference: {fileID: 0}
+    - target: {fileID: 5809983223745389975, guid: da3a014c775130f498af3264877a7ed6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.2650428
+      objectReference: {fileID: 0}
+    - target: {fileID: 5809983223745389975, guid: da3a014c775130f498af3264877a7ed6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.526
+      objectReference: {fileID: 0}
+    - target: {fileID: 5809983223745389975, guid: da3a014c775130f498af3264877a7ed6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5809983223745389975, guid: da3a014c775130f498af3264877a7ed6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5809983223745389975, guid: da3a014c775130f498af3264877a7ed6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5809983223745389975, guid: da3a014c775130f498af3264877a7ed6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5809983223745389975, guid: da3a014c775130f498af3264877a7ed6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5809983223745389975, guid: da3a014c775130f498af3264877a7ed6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5809983223745389975, guid: da3a014c775130f498af3264877a7ed6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: da3a014c775130f498af3264877a7ed6, type: 3}
+>>>>>>> parent of 6289888 (1.14):Assets/prefabs/Cena.unity
 --- !u!1 &1191139133381483201
 GameObject:
   m_ObjectHideFlags: 0
@@ -1672,6 +1728,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6577282479906269677}
   serializedVersion: 2
+<<<<<<< HEAD:Assets/prefabs/Cena 2.0.unity
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: -0, y: 20.528778, z: 0}
   m_LocalScale: {x: 5000, y: 4000, z: 9.251767}
@@ -1681,6 +1738,63 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1987256241329837874
 MeshRenderer:
+=======
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1912814907895921332, guid: 211c60cbc83fa3a4d9feb94867d993ea, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -27.699387
+      objectReference: {fileID: 0}
+    - target: {fileID: 1912814907895921332, guid: 211c60cbc83fa3a4d9feb94867d993ea, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.2650423
+      objectReference: {fileID: 0}
+    - target: {fileID: 1912814907895921332, guid: 211c60cbc83fa3a4d9feb94867d993ea, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.8078876
+      objectReference: {fileID: 0}
+    - target: {fileID: 1912814907895921332, guid: 211c60cbc83fa3a4d9feb94867d993ea, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1912814907895921332, guid: 211c60cbc83fa3a4d9feb94867d993ea, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1912814907895921332, guid: 211c60cbc83fa3a4d9feb94867d993ea, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1912814907895921332, guid: 211c60cbc83fa3a4d9feb94867d993ea, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1912814907895921332, guid: 211c60cbc83fa3a4d9feb94867d993ea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1912814907895921332, guid: 211c60cbc83fa3a4d9feb94867d993ea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1912814907895921332, guid: 211c60cbc83fa3a4d9feb94867d993ea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7987476880320886746, guid: 211c60cbc83fa3a4d9feb94867d993ea, type: 3}
+      propertyPath: m_Name
+      value: vaso com planta carn prefab
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 211c60cbc83fa3a4d9feb94867d993ea, type: 3}
+--- !u!1001 &2259538998100749863
+PrefabInstance:
+>>>>>>> parent of 6289888 (1.14):Assets/prefabs/Cena.unity
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3313,14 +3427,14 @@ RectTransform:
   m_GameObject: {fileID: 7361392631028229459}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.97, y: 1.97, z: 1.97}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 2.3173, y: 2.3173, z: 2.3173}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6088309061224281021}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 603.05, y: -389.5}
+  m_AnchoredPosition: {x: 607, y: -441}
   m_SizeDelta: {x: 325.9576, y: 38.4443}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!108 &4436798895666602680
@@ -3487,6 +3601,7 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+<<<<<<< HEAD:Assets/prefabs/Cena 2.0.unity
 --- !u!218 &4483722992312517177
 Terrain:
   m_ObjectHideFlags: 0
@@ -3739,6 +3854,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+=======
+>>>>>>> parent of 6289888 (1.14):Assets/prefabs/Cena.unity
 --- !u!20 &4944380272727700475
 Camera:
   m_ObjectHideFlags: 0
@@ -3790,6 +3907,7 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+<<<<<<< HEAD:Assets/prefabs/Cena 2.0.unity
 --- !u!23 &5034208802744272649
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4144,6 +4262,65 @@ Transform:
   - {fileID: 41821527793078868}
   m_Father: {fileID: 9214340019429872080}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+--- !u!1001 &5241919331412511182
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2474074904864822649, guid: 72f7f3a6e678f9a489f0d609040ecdc3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 2474074904864822649, guid: 72f7f3a6e678f9a489f0d609040ecdc3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2474074904864822649, guid: 72f7f3a6e678f9a489f0d609040ecdc3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2474074904864822649, guid: 72f7f3a6e678f9a489f0d609040ecdc3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2474074904864822649, guid: 72f7f3a6e678f9a489f0d609040ecdc3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2474074904864822649, guid: 72f7f3a6e678f9a489f0d609040ecdc3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2474074904864822649, guid: 72f7f3a6e678f9a489f0d609040ecdc3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2474074904864822649, guid: 72f7f3a6e678f9a489f0d609040ecdc3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2474074904864822649, guid: 72f7f3a6e678f9a489f0d609040ecdc3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2474074904864822649, guid: 72f7f3a6e678f9a489f0d609040ecdc3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3711760818981084252, guid: 72f7f3a6e678f9a489f0d609040ecdc3, type: 3}
+      propertyPath: m_Name
+      value: lab. prefab
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 72f7f3a6e678f9a489f0d609040ecdc3, type: 3}
+>>>>>>> parent of 6289888 (1.14):Assets/prefabs/Cena.unity
 --- !u!1 &5342388058285438565
 GameObject:
   m_ObjectHideFlags: 0
@@ -7023,8 +7200,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Enter - seguir robot motion \nSpace - pick/drop plant\nP - interagir com
-    postes"
+  m_text: "Enter - seguir robot motion \nSpace - pick/drop plant"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7494,6 +7670,7 @@ SceneRoots:
   - {fileID: 5548375732738808546}
   - {fileID: 6088309061224281021}
   - {fileID: 5349291595632183770}
+<<<<<<< HEAD:Assets/prefabs/Cena 2.0.unity
   - {fileID: 7665970580721383790}
   - {fileID: 548784310310679239}
   - {fileID: 6912222196794238787}
@@ -7501,3 +7678,9 @@ SceneRoots:
   - {fileID: 2669833260624061673}
   - {fileID: 3361930727494955137}
   - {fileID: 8508595469743996776}
+=======
+  - {fileID: 2259538998100749863}
+  - {fileID: 5241919331412511182}
+  - {fileID: 2095866430394534003}
+  - {fileID: 1102275261831774932}
+>>>>>>> parent of 6289888 (1.14):Assets/prefabs/Cena.unity

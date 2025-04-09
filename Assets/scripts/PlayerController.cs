@@ -30,9 +30,6 @@ public class PlayerController : MonoBehaviour
     private Transform cameraTransform;     // Referência à câmera principal
 
     private List<GameObject> vasosInScene = new List<GameObject>(); // Cache local dos vasos com tag "vaso"
-                                                                 
-    private Dictionary<Light, (Color, float)> posteOriginalSettings = new Dictionary<Light, (Color, float)>(); // Guarda a intensidade e cor original das luzes dos postes
-
 
     void Start()
     {
@@ -57,10 +54,6 @@ public class PlayerController : MonoBehaviour
 
         // Aplica flutuação vertical
         ApplyFloatingEffect(groundHeight);
-
-        // Lida com a ação de ligar ou desligar postes
-        HandlePosteInteraction();
-
 
         // Corrige a rotação da "armacaoMarvin"
         if (armacaoMarvin != null)
@@ -204,6 +197,7 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+<<<<<<< HEAD
 
    
     /// Permite ao jogador interagir com postes de luz. Pressionar 'P' alterna a luz ligada/desligada.
@@ -259,4 +253,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+=======
+>>>>>>> parent of 6289888 (1.14)
 }
