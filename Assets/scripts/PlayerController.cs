@@ -4,11 +4,13 @@ using System.Collections.Generic;
 public class PlayerController : MonoBehaviour
 {
     // Velocidade de movimento do jogador (não exceder 10 para evitar problemas de colisão)
-    public float moveSpeed = 7f;
+    public float moveSpeed = 9f;
 
     // Parâmetros para o efeito de flutuação vertical
     public float floatAmplitude = 0.5f;
     public float floatFrequency = 2f;
+
+    public float posteDist = 17f;
 
     // Velocidade de rotação do personagem
     public float rotationSpeed = 10f;
@@ -206,19 +208,20 @@ public class PlayerController : MonoBehaviour
    
     /// Permite ao jogador interagir com postes de luz. Pressionar 'P' alterna a luz ligada/desligada.
     void HandlePosteInteraction()
-    {
+    { 
+        if (Input.GetKeyDown(KeyCode.P))
+                {
         GameObject[] postes = GameObject.FindGameObjectsWithTag("poste");
 
         foreach (GameObject poste in postes)
         {
             float dist = Vector3.Distance(transform.position, poste.transform.position);
 
-            if (dist <= 5f)
+            if (dist <= posteDist)
             {
                 // Debug.Log("Perto do poste");
                 // Verifica se o jogador apertou a tecla "P"
-                if (Input.GetKeyDown(KeyCode.P))
-                {
+               
                     foreach (Transform child in poste.transform)
                     {
                         if (child.CompareTag("luzPoste"))

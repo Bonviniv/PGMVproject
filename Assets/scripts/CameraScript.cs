@@ -1,15 +1,15 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 public class CameraScript : MonoBehaviour
 {
-    public Transform target; // Referência ao personagem
-    public float distance = 13f; // Distância fixa da câmera
+    public Transform target; // Referencia ao personagem
+    public float distance = 13f; // Distancia fixa da cï¿½mera
     public float sensitivity = 3f; // Sensibilidade do mouse
-    public float minYAngle = -10f, maxYAngle = 60f; // Limites verticais da câmera
+    public float minYAngle = -10f, maxYAngle = 60f; // Limites verticais da camera
 
     private float rotationX = 0f;
     private float rotationY = 0f;
-    private bool followFloating = true; // Controle para seguir ou não a subida e descida
+    private bool followFloating = true; // Controle para seguir ou nao a subida e descida
 
     void Start()
     {
@@ -40,7 +40,7 @@ public class CameraScript : MonoBehaviour
 
             Quaternion rotation = Quaternion.Euler(rotationY, rotationX, 0);
 
-            // Corrige o valor de Y com base na escolha do usuário
+            // Corrige o valor de Y com base na escolha do usuï¿½rio
             float floatOffset = Mathf.Sin(Time.time * 2f) * 0.5f;
             float adjustedY = followFloating ? target.position.y : target.position.y - floatOffset;
 
@@ -49,7 +49,7 @@ public class CameraScript : MonoBehaviour
             Vector3 direction = (desiredCameraPos - correctedTargetPos).normalized;
             float maxDistance = distance;
 
-            // Raycast para detectar colisões
+            // Raycast para detectar colisï¿½es
             RaycastHit hit;
             if (Physics.Raycast(correctedTargetPos, direction, out hit, maxDistance))
             {
